@@ -19,6 +19,10 @@
 		E16B2A622AF234830013DC62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16B2A602AF234830013DC62 /* LaunchScreen.storyboard */; };
 		E16B2A6D2AF236630013DC62 /* HomeLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B2A6C2AF236630013DC62 /* HomeLandingViewController.swift */; };
 		E16B2A6F2AF2366E0013DC62 /* HomeLanding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16B2A6E2AF2366E0013DC62 /* HomeLanding.storyboard */; };
+		E19BA7AA2AF262010058A980 /* HomeLandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7A92AF262010058A980 /* HomeLandingViewModel.swift */; };
+		E19BA7AF2AF263D30058A980 /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7AE2AF263D30058A980 /* URLSessionService.swift */; };
+		E19BA7B12AF263FC0058A980 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7B02AF263FC0058A980 /* NetworkError.swift */; };
+		E19BA7B32AF2640B0058A980 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7B22AF2640B0058A980 /* JSONParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		E16B2A632AF234830013DC62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E16B2A6C2AF236630013DC62 /* HomeLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLandingViewController.swift; sourceTree = "<group>"; };
 		E16B2A6E2AF2366E0013DC62 /* HomeLanding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeLanding.storyboard; sourceTree = "<group>"; };
+		E19BA7A92AF262010058A980 /* HomeLandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLandingViewModel.swift; sourceTree = "<group>"; };
+		E19BA7AE2AF263D30058A980 /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
+		E19BA7B02AF263FC0058A980 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E19BA7B22AF2640B0058A980 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +123,12 @@
 			isa = PBXGroup;
 			children = (
 				E16B2A692AF235740013DC62 /* App LifeCycle */,
+				E19BA7AD2AF263AA0058A980 /* Network Layer */,
 				E16B2A712AF238D80013DC62 /* Modules */,
+				E105937E2AF2452E0071C005 /* Comman */,
 				E16B2A5E2AF234830013DC62 /* Assets.xcassets */,
 				E16B2A602AF234830013DC62 /* LaunchScreen.storyboard */,
 				E16B2A632AF234830013DC62 /* Info.plist */,
-				E105937E2AF2452E0071C005 /* Comman */,
 			);
 			path = "Wally GCD";
 			sourceTree = "<group>";
@@ -137,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				E115F0502AF23BBE0077AF35 /* Views */,
+				E19BA7A92AF262010058A980 /* HomeLandingViewModel.swift */,
 			);
 			path = "Home Landing";
 			sourceTree = "<group>";
@@ -147,6 +157,16 @@
 				E16B2A702AF236730013DC62 /* Home Landing */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		E19BA7AD2AF263AA0058A980 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				E19BA7AE2AF263D30058A980 /* URLSessionService.swift */,
+				E19BA7B02AF263FC0058A980 /* NetworkError.swift */,
+				E19BA7B22AF2640B0058A980 /* JSONParser.swift */,
+			);
+			path = "Network Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,10 +245,14 @@
 				E16B2A562AF234800013DC62 /* AppDelegate.swift in Sources */,
 				E16B2A582AF234800013DC62 /* SceneDelegate.swift in Sources */,
 				E115F0582AF23D470077AF35 /* MovieCollectionViewCell.swift in Sources */,
+				E19BA7B32AF2640B0058A980 /* JSONParser.swift in Sources */,
 				E115F0532AF23C000077AF35 /* MoviesTableViewCell.swift in Sources */,
 				E10593812AF2454A0071C005 /* Constants.swift in Sources */,
+				E19BA7AF2AF263D30058A980 /* URLSessionService.swift in Sources */,
 				E105937D2AF244BF0071C005 /* BaseViewControllerProtocol.swift in Sources */,
 				E16B2A6D2AF236630013DC62 /* HomeLandingViewController.swift in Sources */,
+				E19BA7AA2AF262010058A980 /* HomeLandingViewModel.swift in Sources */,
+				E19BA7B12AF263FC0058A980 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
