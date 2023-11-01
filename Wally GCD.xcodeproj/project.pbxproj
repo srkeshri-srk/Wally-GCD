@@ -23,6 +23,8 @@
 		E19BA7AF2AF263D30058A980 /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7AE2AF263D30058A980 /* URLSessionService.swift */; };
 		E19BA7B12AF263FC0058A980 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7B02AF263FC0058A980 /* NetworkError.swift */; };
 		E19BA7B32AF2640B0058A980 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7B22AF2640B0058A980 /* JSONParser.swift */; };
+		E19BA7B62AF270B50058A980 /* CustomHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7B42AF270B50058A980 /* CustomHeaderTableViewCell.swift */; };
+		E19BA7B72AF270B50058A980 /* CustomHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E19BA7B52AF270B50058A980 /* CustomHeaderTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		E19BA7AE2AF263D30058A980 /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
 		E19BA7B02AF263FC0058A980 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		E19BA7B22AF2640B0058A980 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		E19BA7B42AF270B50058A980 /* CustomHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		E19BA7B52AF270B50058A980 /* CustomHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 			children = (
 				E115F0512AF23C000077AF35 /* MoviesTableViewCell.swift */,
 				E115F0522AF23C000077AF35 /* MoviesTableViewCell.xib */,
+				E19BA7B42AF270B50058A980 /* CustomHeaderTableViewCell.swift */,
+				E19BA7B52AF270B50058A980 /* CustomHeaderTableViewCell.xib */,
 			);
 			path = "Table Cells";
 			sourceTree = "<group>";
@@ -230,6 +236,7 @@
 				E115F0592AF23D470077AF35 /* MovieCollectionViewCell.xib in Resources */,
 				E16B2A622AF234830013DC62 /* LaunchScreen.storyboard in Resources */,
 				E16B2A5F2AF234830013DC62 /* Assets.xcassets in Resources */,
+				E19BA7B72AF270B50058A980 /* CustomHeaderTableViewCell.xib in Resources */,
 				E115F0542AF23C000077AF35 /* MoviesTableViewCell.xib in Resources */,
 				E16B2A6F2AF2366E0013DC62 /* HomeLanding.storyboard in Resources */,
 			);
@@ -251,6 +258,7 @@
 				E19BA7AF2AF263D30058A980 /* URLSessionService.swift in Sources */,
 				E105937D2AF244BF0071C005 /* BaseViewControllerProtocol.swift in Sources */,
 				E16B2A6D2AF236630013DC62 /* HomeLandingViewController.swift in Sources */,
+				E19BA7B62AF270B50058A980 /* CustomHeaderTableViewCell.swift in Sources */,
 				E19BA7AA2AF262010058A980 /* HomeLandingViewModel.swift in Sources */,
 				E19BA7B12AF263FC0058A980 /* NetworkError.swift in Sources */,
 			);

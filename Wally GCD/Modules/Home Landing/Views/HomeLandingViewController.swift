@@ -29,13 +29,14 @@ private extension HomeLandingViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "MoviesTableViewCell", bundle: nil), forCellReuseIdentifier: "MoviesTableViewCell")
+        tableView.register(UINib(nibName: "CustomHeaderTableViewCell", bundle: nil), forHeaderFooterViewReuseIdentifier: "CustomHeaderTableViewCell")
     }
 }
 
 
 extension HomeLandingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,6 +46,20 @@ extension HomeLandingViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 10
+    }
+            
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell: CustomHeaderTableViewCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderTableViewCell") as! CustomHeaderTableViewCell
+        cell.configureUI(title: "Section : \(section)")
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
     
 }
