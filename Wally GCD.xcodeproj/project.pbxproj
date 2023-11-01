@@ -25,6 +25,7 @@
 		E19BA7B32AF2640B0058A980 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7B22AF2640B0058A980 /* JSONParser.swift */; };
 		E19BA7B62AF270B50058A980 /* CustomHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7B42AF270B50058A980 /* CustomHeaderTableViewCell.swift */; };
 		E19BA7B72AF270B50058A980 /* CustomHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E19BA7B52AF270B50058A980 /* CustomHeaderTableViewCell.xib */; };
+		E19BA7BD2AF2D3F30058A980 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7BC2AF2D3F30058A980 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		E19BA7B42AF270B50058A980 /* CustomHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		E19BA7B52AF270B50058A980 /* CustomHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		E19BA7B92AF2CFA60058A980 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		E19BA7BC2AF2D3F30058A980 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				E16B2A712AF238D80013DC62 /* Modules */,
 				E105937E2AF2452E0071C005 /* Comman */,
 				E19BA7B82AF2CB910058A980 /* Resources */,
+				E19BA7BE2AF2D4810058A980 /* Configuration */,
 				E16B2A632AF234830013DC62 /* Info.plist */,
 			);
 			path = "Wally GCD";
@@ -180,9 +183,17 @@
 			children = (
 				E16B2A5E2AF234830013DC62 /* Assets.xcassets */,
 				E16B2A602AF234830013DC62 /* LaunchScreen.storyboard */,
-				E19BA7B92AF2CFA60058A980 /* Config.xcconfig */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E19BA7BE2AF2D4810058A980 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E19BA7B92AF2CFA60058A980 /* Config.xcconfig */,
+				E19BA7BC2AF2D3F30058A980 /* Environment.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 				E10593812AF2454A0071C005 /* Constants.swift in Sources */,
 				E19BA7AF2AF263D30058A980 /* URLSessionService.swift in Sources */,
 				E105937D2AF244BF0071C005 /* BaseViewControllerProtocol.swift in Sources */,
+				E19BA7BD2AF2D3F30058A980 /* Environment.swift in Sources */,
 				E16B2A6D2AF236630013DC62 /* HomeLandingViewController.swift in Sources */,
 				E19BA7B62AF270B50058A980 /* CustomHeaderTableViewCell.swift in Sources */,
 				E19BA7AA2AF262010058A980 /* HomeLandingViewModel.swift in Sources */,
