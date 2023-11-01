@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		E105937D2AF244BF0071C005 /* BaseViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E105937C2AF244BF0071C005 /* BaseViewControllerProtocol.swift */; };
 		E10593812AF2454A0071C005 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10593802AF2454A0071C005 /* Constants.swift */; };
-		E115F0532AF23C000077AF35 /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115F0512AF23C000077AF35 /* MoviesTableViewCell.swift */; };
-		E115F0542AF23C000077AF35 /* MoviesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E115F0522AF23C000077AF35 /* MoviesTableViewCell.xib */; };
-		E115F0582AF23D470077AF35 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115F0562AF23D470077AF35 /* MovieCollectionViewCell.swift */; };
-		E115F0592AF23D470077AF35 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E115F0572AF23D470077AF35 /* MovieCollectionViewCell.xib */; };
+		E115F0532AF23C000077AF35 /* WallyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115F0512AF23C000077AF35 /* WallyTableViewCell.swift */; };
+		E115F0542AF23C000077AF35 /* WallyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E115F0522AF23C000077AF35 /* WallyTableViewCell.xib */; };
+		E115F0582AF23D470077AF35 /* WallyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115F0562AF23D470077AF35 /* WallyCollectionViewCell.swift */; };
+		E115F0592AF23D470077AF35 /* WallyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E115F0572AF23D470077AF35 /* WallyCollectionViewCell.xib */; };
 		E16B2A562AF234800013DC62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B2A552AF234800013DC62 /* AppDelegate.swift */; };
 		E16B2A582AF234800013DC62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B2A572AF234800013DC62 /* SceneDelegate.swift */; };
 		E16B2A5F2AF234830013DC62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16B2A5E2AF234830013DC62 /* Assets.xcassets */; };
@@ -31,10 +31,10 @@
 /* Begin PBXFileReference section */
 		E105937C2AF244BF0071C005 /* BaseViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerProtocol.swift; sourceTree = "<group>"; };
 		E10593802AF2454A0071C005 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E115F0512AF23C000077AF35 /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewCell.swift; sourceTree = "<group>"; };
-		E115F0522AF23C000077AF35 /* MoviesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesTableViewCell.xib; sourceTree = "<group>"; };
-		E115F0562AF23D470077AF35 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
-		E115F0572AF23D470077AF35 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		E115F0512AF23C000077AF35 /* WallyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallyTableViewCell.swift; sourceTree = "<group>"; };
+		E115F0522AF23C000077AF35 /* WallyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallyTableViewCell.xib; sourceTree = "<group>"; };
+		E115F0562AF23D470077AF35 /* WallyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallyCollectionViewCell.swift; sourceTree = "<group>"; };
+		E115F0572AF23D470077AF35 /* WallyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallyCollectionViewCell.xib; sourceTree = "<group>"; };
 		E16B2A522AF234800013DC62 /* Wally GCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wally GCD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16B2A552AF234800013DC62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E16B2A572AF234800013DC62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,8 +95,8 @@
 		E115F0552AF23C280077AF35 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E115F0512AF23C000077AF35 /* MoviesTableViewCell.swift */,
-				E115F0522AF23C000077AF35 /* MoviesTableViewCell.xib */,
+				E115F0512AF23C000077AF35 /* WallyTableViewCell.swift */,
+				E115F0522AF23C000077AF35 /* WallyTableViewCell.xib */,
 				E19BA7B42AF270B50058A980 /* CustomHeaderTableViewCell.swift */,
 				E19BA7B52AF270B50058A980 /* CustomHeaderTableViewCell.xib */,
 			);
@@ -106,8 +106,8 @@
 		E115F05A2AF23D4A0077AF35 /* Collection Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E115F0562AF23D470077AF35 /* MovieCollectionViewCell.swift */,
-				E115F0572AF23D470077AF35 /* MovieCollectionViewCell.xib */,
+				E115F0562AF23D470077AF35 /* WallyCollectionViewCell.swift */,
+				E115F0572AF23D470077AF35 /* WallyCollectionViewCell.xib */,
 			);
 			path = "Collection Cells";
 			sourceTree = "<group>";
@@ -254,11 +254,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E115F0592AF23D470077AF35 /* MovieCollectionViewCell.xib in Resources */,
+				E115F0592AF23D470077AF35 /* WallyCollectionViewCell.xib in Resources */,
 				E16B2A622AF234830013DC62 /* LaunchScreen.storyboard in Resources */,
 				E16B2A5F2AF234830013DC62 /* Assets.xcassets in Resources */,
 				E19BA7B72AF270B50058A980 /* CustomHeaderTableViewCell.xib in Resources */,
-				E115F0542AF23C000077AF35 /* MoviesTableViewCell.xib in Resources */,
+				E115F0542AF23C000077AF35 /* WallyTableViewCell.xib in Resources */,
 				E16B2A6F2AF2366E0013DC62 /* HomeLanding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,9 +272,9 @@
 			files = (
 				E16B2A562AF234800013DC62 /* AppDelegate.swift in Sources */,
 				E16B2A582AF234800013DC62 /* SceneDelegate.swift in Sources */,
-				E115F0582AF23D470077AF35 /* MovieCollectionViewCell.swift in Sources */,
+				E115F0582AF23D470077AF35 /* WallyCollectionViewCell.swift in Sources */,
 				E19BA7B32AF2640B0058A980 /* JSONParser.swift in Sources */,
-				E115F0532AF23C000077AF35 /* MoviesTableViewCell.swift in Sources */,
+				E115F0532AF23C000077AF35 /* WallyTableViewCell.swift in Sources */,
 				E10593812AF2454A0071C005 /* Constants.swift in Sources */,
 				E19BA7AF2AF263D30058A980 /* URLSessionService.swift in Sources */,
 				E105937D2AF244BF0071C005 /* BaseViewControllerProtocol.swift in Sources */,

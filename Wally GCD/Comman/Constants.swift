@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+
+struct Constants {
+    //Home Landing
+    struct HomeLanding {
+        static let Title = "Wally"
+        static let WallyTableViewCell = "WallyTableViewCell"
+        static let WallyCollectionViewCell = "WallyCollectionViewCell"
+        static let CustomHeaderTableViewCell = "CustomHeaderTableViewCell"
+    }
+    
+    //Network Layer
+    struct NetworkLayer {
+        static let apiKey = Environment.apiKey
+    }
+}

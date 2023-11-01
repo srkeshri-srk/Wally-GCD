@@ -22,14 +22,14 @@ class HomeLandingViewController: UIViewController {
 
 private extension HomeLandingViewController {
     func setupUI() {
-        setnavigation(withLargeTitle: "Movie Masala")
+        setnavigation(withLargeTitle: Constants.HomeLanding.Title)
     }
     
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "MoviesTableViewCell", bundle: nil), forCellReuseIdentifier: "MoviesTableViewCell")
-        tableView.register(UINib(nibName: "CustomHeaderTableViewCell", bundle: nil), forHeaderFooterViewReuseIdentifier: "CustomHeaderTableViewCell")
+        tableView.register(UINib(nibName: Constants.HomeLanding.WallyTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.HomeLanding.WallyTableViewCell)
+        tableView.register(UINib(nibName: Constants.HomeLanding.CustomHeaderTableViewCell, bundle: nil), forHeaderFooterViewReuseIdentifier: Constants.HomeLanding.CustomHeaderTableViewCell)
     }
 }
 
@@ -40,7 +40,7 @@ extension HomeLandingViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MoviesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MoviesTableViewCell", for: indexPath) as! MoviesTableViewCell
+        let cell: WallyTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.HomeLanding.WallyTableViewCell, for: indexPath) as! WallyTableViewCell
         return cell
     }
     
@@ -53,7 +53,7 @@ extension HomeLandingViewController: UITableViewDelegate, UITableViewDataSource 
     }
             
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell: CustomHeaderTableViewCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderTableViewCell") as! CustomHeaderTableViewCell
+        let cell: CustomHeaderTableViewCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.HomeLanding.CustomHeaderTableViewCell) as! CustomHeaderTableViewCell
         cell.configureUI(title: "Section : \(section)")
         return cell
     }

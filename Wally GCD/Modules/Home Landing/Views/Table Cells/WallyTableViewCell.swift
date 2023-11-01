@@ -1,5 +1,5 @@
 //
-//  MoviesTableViewCell.swift
+//  WallyTableViewCell.swift
 //  Wally GCD
 //
 //  Created by Shreyansh Raj  Keshri on 01/11/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MoviesTableViewCell: UITableViewCell {
+class WallyTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -21,7 +21,7 @@ class MoviesTableViewCell: UITableViewCell {
     
 }
 
-extension MoviesTableViewCell {
+extension WallyTableViewCell {
     func setupUI() {
         
     }
@@ -29,17 +29,17 @@ extension MoviesTableViewCell {
     func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UINib(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieCollectionViewCell")
+        collectionView.register(UINib(nibName: Constants.HomeLanding.WallyCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.HomeLanding.WallyCollectionViewCell)
     }
 }
 
-extension MoviesTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension WallyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: MovieCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
+        let cell: WallyCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.HomeLanding.WallyCollectionViewCell, for: indexPath) as! WallyCollectionViewCell
         return cell
     }
 

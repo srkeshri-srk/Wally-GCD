@@ -1,5 +1,5 @@
 //
-//  MovieCollectionViewCell.swift
+//  WallyCollectionViewCell.swift
 //  Wally GCD
 //
 //  Created by Shreyansh Raj  Keshri on 01/11/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieCollectionViewCell: UICollectionViewCell {
+class WallyCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var artworkImageView: UIImageView!
     
@@ -21,7 +21,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
 
 }
 
-private extension MovieCollectionViewCell {
+private extension WallyCollectionViewCell {
     func setupUI() {
         artworkImageView.image = UIImage(named: images.randomElement() ?? "panda1")
     }
