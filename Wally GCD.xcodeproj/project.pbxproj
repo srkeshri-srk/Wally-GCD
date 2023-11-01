@@ -48,6 +48,7 @@
 		E19BA7B22AF2640B0058A980 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		E19BA7B42AF270B50058A980 /* CustomHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		E19BA7B52AF270B50058A980 /* CustomHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		E19BA7B92AF2CFA60058A980 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +133,7 @@
 				E19BA7AD2AF263AA0058A980 /* Network Layer */,
 				E16B2A712AF238D80013DC62 /* Modules */,
 				E105937E2AF2452E0071C005 /* Comman */,
-				E16B2A5E2AF234830013DC62 /* Assets.xcassets */,
-				E16B2A602AF234830013DC62 /* LaunchScreen.storyboard */,
+				E19BA7B82AF2CB910058A980 /* Resources */,
 				E16B2A632AF234830013DC62 /* Info.plist */,
 			);
 			path = "Wally GCD";
@@ -173,6 +173,16 @@
 				E19BA7B22AF2640B0058A980 /* JSONParser.swift */,
 			);
 			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		E19BA7B82AF2CB910058A980 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E16B2A5E2AF234830013DC62 /* Assets.xcassets */,
+				E16B2A602AF234830013DC62 /* LaunchScreen.storyboard */,
+				E19BA7B92AF2CFA60058A980 /* Config.xcconfig */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +290,7 @@
 /* Begin XCBuildConfiguration section */
 		E16B2A642AF234830013DC62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E19BA7B92AF2CFA60058A980 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -343,6 +354,7 @@
 		};
 		E16B2A652AF234830013DC62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E19BA7B92AF2CFA60058A980 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -399,6 +411,7 @@
 		};
 		E16B2A672AF234830013DC62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E19BA7B92AF2CFA60058A980 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -426,6 +439,7 @@
 		};
 		E16B2A682AF234830013DC62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E19BA7B92AF2CFA60058A980 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
