@@ -34,9 +34,8 @@ class HomeLandingViewController: UIViewController {
     }
     
     func fetchData() {
-        homeLandingViewModel.hitAPI("https://api.pexels.com/v1/curated") {
+        homeLandingViewModel.hitAPIForSection("https://api.pexels.com/v1/curated") {
             print("Fetch Successfully...")
-            //self.tableView.reloadData()
         }
     }
     

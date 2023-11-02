@@ -19,6 +19,8 @@ struct Constants {
     
     //Network Layer
     struct NetworkLayer {
-        static let apiKey = Environment.apiKey
+        static let apiKey = ConfigManager.apiKey
+        static let baseURL = ConfigManager.baseURL
+        static let version = ConfigManager.version
     }
 }

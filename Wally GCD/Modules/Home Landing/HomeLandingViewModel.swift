@@ -10,7 +10,7 @@ import Foundation
 class HomeLandingViewModel {
     private let urlSession = URLSessionNetworkLayer()
     
-    func hitAPI(_ urlString: String, competion: @escaping ()->Void) {
+    func hitAPIForSection(_ urlString: String, competion: @escaping ()->Void) {
         guard let url = URL(string: urlString) else { return }
         
         let headers = ["Content-Type" : "application/json", "Authorization" : Constants.NetworkLayer.apiKey]
