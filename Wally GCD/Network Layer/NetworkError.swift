@@ -11,4 +11,5 @@ enum NetworkError: Error {
     case urlNotFound
     case dataCantParse
     case noDataFound
+    case httpFailure
 }

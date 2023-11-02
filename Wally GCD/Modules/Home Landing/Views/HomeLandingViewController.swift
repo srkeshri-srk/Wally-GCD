@@ -11,26 +11,34 @@ class HomeLandingViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let homeLandingViewModel = HomeLandingViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         setupTableView()
+        fetchData()
     }
     
-}
-
-private extension HomeLandingViewController {
-    func setupUI() {
+    private func setupUI() {
         setnavigation(withLargeTitle: Constants.HomeLanding.Title)
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: Constants.HomeLanding.WallyTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.HomeLanding.WallyTableViewCell)
         tableView.register(UINib(nibName: Constants.HomeLanding.CustomHeaderTableViewCell, bundle: nil), forHeaderFooterViewReuseIdentifier: Constants.HomeLanding.CustomHeaderTableViewCell)
     }
+    
+    func fetchData() {
+        homeLandingViewModel.hitAPI("https://api.pexels.com/v1/curated") {
+            print("Fetch Successfully...")
+            //self.tableView.reloadData()
+        }
+    }
+    
 }
 
 

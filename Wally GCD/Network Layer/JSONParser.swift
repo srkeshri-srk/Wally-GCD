@@ -9,9 +9,9 @@ import Foundation
 
 
 public class JSONParser {
-    private let decode = JSONDecoder()
+    private let decoder = JSONDecoder()
     
-    func decode<T: Decodable>(_ data: Data) -> T? {
-        return try? decode.decode(T.self, from: data)
+    func decode<T: Codable>(_ data: Data) -> T? {
+        return try? decoder.decode(T.self, from: data)
     }
 }

@@ -26,6 +26,8 @@
 		E19BA7B62AF270B50058A980 /* CustomHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7B42AF270B50058A980 /* CustomHeaderTableViewCell.swift */; };
 		E19BA7B72AF270B50058A980 /* CustomHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E19BA7B52AF270B50058A980 /* CustomHeaderTableViewCell.xib */; };
 		E19BA7BD2AF2D3F30058A980 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7BC2AF2D3F30058A980 /* Environment.swift */; };
+		E19BA7C02AF2D8DC0058A980 /* HomeLandingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7BF2AF2D8DC0058A980 /* HomeLandingModel.swift */; };
+		E19BA7C22AF2D9980058A980 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19BA7C12AF2D9980058A980 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		E19BA7B52AF270B50058A980 /* CustomHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		E19BA7B92AF2CFA60058A980 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		E19BA7BC2AF2D3F30058A980 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		E19BA7BF2AF2D8DC0058A980 /* HomeLandingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLandingModel.swift; sourceTree = "<group>"; };
+		E19BA7C12AF2D9980058A980 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +158,9 @@
 		E16B2A702AF236730013DC62 /* Home Landing */ = {
 			isa = PBXGroup;
 			children = (
-				E115F0502AF23BBE0077AF35 /* Views */,
+				E19BA7BF2AF2D8DC0058A980 /* HomeLandingModel.swift */,
 				E19BA7A92AF262010058A980 /* HomeLandingViewModel.swift */,
+				E115F0502AF23BBE0077AF35 /* Views */,
 			);
 			path = "Home Landing";
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				E19BA7AE2AF263D30058A980 /* URLSessionService.swift */,
 				E19BA7B02AF263FC0058A980 /* NetworkError.swift */,
 				E19BA7B22AF2640B0058A980 /* JSONParser.swift */,
+				E19BA7C12AF2D9980058A980 /* APIRequest.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 			files = (
 				E16B2A562AF234800013DC62 /* AppDelegate.swift in Sources */,
 				E16B2A582AF234800013DC62 /* SceneDelegate.swift in Sources */,
+				E19BA7C02AF2D8DC0058A980 /* HomeLandingModel.swift in Sources */,
 				E115F0582AF23D470077AF35 /* WallyCollectionViewCell.swift in Sources */,
 				E19BA7B32AF2640B0058A980 /* JSONParser.swift in Sources */,
 				E115F0532AF23C000077AF35 /* WallyTableViewCell.swift in Sources */,
@@ -282,6 +289,7 @@
 				E16B2A6D2AF236630013DC62 /* HomeLandingViewController.swift in Sources */,
 				E19BA7B62AF270B50058A980 /* CustomHeaderTableViewCell.swift in Sources */,
 				E19BA7AA2AF262010058A980 /* HomeLandingViewModel.swift in Sources */,
+				E19BA7C22AF2D9980058A980 /* APIRequest.swift in Sources */,
 				E19BA7B12AF263FC0058A980 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
