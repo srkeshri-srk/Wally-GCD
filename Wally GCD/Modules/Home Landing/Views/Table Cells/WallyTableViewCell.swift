@@ -17,21 +17,19 @@ class WallyTableViewCell: UITableViewCell {
         setupUI()
         setupCollectionView()
     }
-
     
-}
-
-extension WallyTableViewCell {
-    func setupUI() {
+    private func setupUI() {
         
     }
     
-    func setupCollectionView() {
+    private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: Constants.HomeLanding.WallyCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.HomeLanding.WallyCollectionViewCell)
     }
+    
 }
+
 
 extension WallyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -45,6 +43,10 @@ extension WallyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 140, height: 140)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
     }
     
     
