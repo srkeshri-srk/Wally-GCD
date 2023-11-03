@@ -38,6 +38,7 @@ extension WallyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: WallyCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.HomeLanding.WallyCollectionViewCell, for: indexPath) as! WallyCollectionViewCell
+        cell.configureUI()
         return cell
     }
 

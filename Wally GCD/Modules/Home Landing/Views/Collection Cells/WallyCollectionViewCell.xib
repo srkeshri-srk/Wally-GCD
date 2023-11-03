@@ -23,48 +23,40 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="panda1" translatesAutoresizingMaskIntoConstraints="NO" id="N3k-Zy-OqO">
                                 <rect key="frame" x="0.0" y="0.0" width="129" height="166"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5j-cC-cyX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photographer Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UG-9x-AaV">
                                 <rect key="frame" x="0.0" y="146" width="129" height="20"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photographer Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UG-9x-AaV">
-                                        <rect key="frame" x="41" y="4.6666666666666572" width="83" height="11"/>
-                                        <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="12"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="AzQ-Ig-HfK"/>
-                                    <constraint firstAttribute="trailing" secondItem="7UG-9x-AaV" secondAttribute="trailing" constant="5" id="IFP-JB-d9p"/>
-                                    <constraint firstItem="7UG-9x-AaV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G5j-cC-cyX" secondAttribute="leading" constant="5" id="coM-Cb-XUp"/>
-                                    <constraint firstItem="7UG-9x-AaV" firstAttribute="centerY" secondItem="G5j-cC-cyX" secondAttribute="centerY" id="mOw-IY-kEG"/>
+                                    <constraint firstAttribute="height" constant="20" id="y7Q-gu-p6J"/>
                                 </constraints>
-                            </view>
+                                <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="G5j-cC-cyX" secondAttribute="bottom" id="06V-DE-Odr"/>
-                            <constraint firstAttribute="bottom" secondItem="N3k-Zy-OqO" secondAttribute="bottom" id="5ex-Z4-rvs"/>
-                            <constraint firstItem="N3k-Zy-OqO" firstAttribute="top" secondItem="lvz-gc-IaS" secondAttribute="top" id="JWz-PB-7G6"/>
-                            <constraint firstAttribute="trailing" secondItem="G5j-cC-cyX" secondAttribute="trailing" id="fqL-ql-zDV"/>
-                            <constraint firstItem="N3k-Zy-OqO" firstAttribute="leading" secondItem="lvz-gc-IaS" secondAttribute="leading" id="hbt-Mm-AAQ"/>
-                            <constraint firstItem="G5j-cC-cyX" firstAttribute="leading" secondItem="lvz-gc-IaS" secondAttribute="leading" id="y5A-Qa-jAT"/>
-                            <constraint firstAttribute="trailing" secondItem="N3k-Zy-OqO" secondAttribute="trailing" id="zG4-el-xr2"/>
+                            <constraint firstItem="7UG-9x-AaV" firstAttribute="trailing" secondItem="N3k-Zy-OqO" secondAttribute="trailing" id="0dU-85-rSG"/>
+                            <constraint firstAttribute="bottom" secondItem="N3k-Zy-OqO" secondAttribute="bottom" id="49T-PF-kLz"/>
+                            <constraint firstItem="7UG-9x-AaV" firstAttribute="bottom" secondItem="N3k-Zy-OqO" secondAttribute="bottom" id="bNi-Yu-25B"/>
+                            <constraint firstItem="N3k-Zy-OqO" firstAttribute="leading" secondItem="lvz-gc-IaS" secondAttribute="leading" id="dCX-gE-CPO"/>
+                            <constraint firstItem="7UG-9x-AaV" firstAttribute="leading" secondItem="N3k-Zy-OqO" secondAttribute="leading" id="flH-4y-Ttf"/>
+                            <constraint firstAttribute="trailing" secondItem="N3k-Zy-OqO" secondAttribute="trailing" id="hz8-zo-fLI"/>
+                            <constraint firstItem="N3k-Zy-OqO" firstAttribute="top" secondItem="lvz-gc-IaS" secondAttribute="top" id="nYP-8Q-3Gk"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="lvz-gc-IaS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Gh8-aZ-r4a"/>
-                <constraint firstAttribute="bottom" secondItem="lvz-gc-IaS" secondAttribute="bottom" id="Vy4-xl-crZ"/>
-                <constraint firstAttribute="trailing" secondItem="lvz-gc-IaS" secondAttribute="trailing" constant="5" id="Wxs-ey-OjW"/>
-                <constraint firstItem="lvz-gc-IaS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="tgf-rk-HeW"/>
+                <constraint firstItem="lvz-gc-IaS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="E26-e5-ay6"/>
+                <constraint firstItem="lvz-gc-IaS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="ORF-52-5xc"/>
+                <constraint firstAttribute="trailing" secondItem="lvz-gc-IaS" secondAttribute="trailing" constant="5" id="PCA-Jc-UdU"/>
+                <constraint firstAttribute="bottom" secondItem="lvz-gc-IaS" secondAttribute="bottom" id="Yj6-TH-Jm1"/>
             </constraints>
             <size key="customSize" width="145" height="167"/>
             <connections>
                 <outlet property="artworkImageView" destination="N3k-Zy-OqO" id="amF-AP-KZp"/>
+                <outlet property="nameLabel" destination="7UG-9x-AaV" id="MuT-EN-nwj"/>
             </connections>
             <point key="canvasLocation" x="211.4503816793893" y="60.563380281690144"/>
         </collectionViewCell>

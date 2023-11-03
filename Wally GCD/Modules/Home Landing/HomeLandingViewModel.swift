@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 class HomeLandingViewModel {
     private let urlSession = URLSessionNetworkLayer()
     private var dataModel: HomeLandingModel?
