@@ -9,20 +9,29 @@ import Foundation
 
 class HomeLandingViewModel {
     private let urlSession = URLSessionNetworkLayer()
+    private var dataModel: HomeLandingModel?
     
-    func hitAPIForSection(_ urlString: String, competion: @escaping ()->Void) {
-        guard let url = URL(string: urlString) else { return }
+    var dataCount: Int {
+        return dataModel?.photos?.count ?? 0
+    }
+    
+    func hitAPIForSection(atPage number: Int, competion: (()->Void)? = nil) {
+        guard let url = URL(string: "https://api.pexels.com/v1/curated") else { return }
         
-        let headers = ["Content-Type" : "application/json", "Authorization" : Constants.NetworkLayer.apiKey]
-        let apiRequest = APIRequest(url: url, method: .GET, headers: headers, queryParams: nil, body: nil)
+        let headers = ["Authorization" : Constants.NetworkLayer.apiKey]
+        let queryParams = ["page": String(number), "per_page" : "10"]
+        let apiRequest = APIRequest(url: url, method: .GET, headers: headers, queryParams: queryParams, body: nil)
         
-        urlSession.dataTask(apiRequest) { (_ result: Result<HomeLandingModel, NetworkError>) in
+        urlSession.dataTask(apiRequest) { [weak self] (_ result: Result<HomeLandingModel, NetworkError>) in
+            guard let self = self else { return }
+            
             switch result {
             case .success(let data):
-                competion()
+                self.dataModel = data
+                competion?()
             case .failure(let error):
                 debugPrint("Error : ", error)
-                competion()
+                competion?()
             }
         }
     }

@@ -11,7 +11,7 @@ class HomeLandingViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let homeLandingViewModel = HomeLandingViewModel()
+    let viewModel = HomeLandingViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +34,7 @@ class HomeLandingViewController: UIViewController {
     }
     
     func fetchData() {
-        homeLandingViewModel.hitAPIForSection("https://api.pexels.com/v1/curated") {
-            print("Fetch Successfully...")
-        }
+        viewModel.hitAPIForSection(atPage: 2)
     }
     
 }
