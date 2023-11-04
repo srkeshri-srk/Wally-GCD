@@ -16,27 +16,28 @@ public struct ConfigManager {
     
     // Get the API_KEY
     static let apiKey: String = {
-        guard let apiKeyProperty = Bundle.main.object(forInfoDictionaryKey: Keys.apiKey) as? String else {
+        guard let property = Bundle.main.object(forInfoDictionaryKey: Keys.apiKey) as? String else {
             fatalError("API_KEY not found")
         }
         
-        return apiKeyProperty
+        return property
     }()
     
     // Get the BASE_URL
     static let baseURL: String = {
-        guard let baseURLProperty = Bundle.main.object(forInfoDictionaryKey: Keys.baseURL) as? String else {
-            fatalError("BASE_URL not found")
+        guard let property = Bundle.main.object(forInfoDictionaryKey: Keys.baseURL) as? String else {
+            fatalError("BASE_KEY not found")
         }
         
-        return baseURLProperty
+        return property
     }()
     
+    
     static let version: String = {
-        guard let versionProperty = Bundle.main.object(forInfoDictionaryKey: Keys.version) as? String else {
+        guard let property = Bundle.main.object(forInfoDictionaryKey: Keys.version) as? String else {
             fatalError("VERSION not found")
         }
         
-        return versionProperty
+        return property
     }()
 }

@@ -6,15 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
+
 
 class WallyCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var artworkImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    
-    
-    var images = ["panda1", "panda2", "panda3", "panda4", "panda5", "panda6"]
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -31,9 +30,13 @@ class WallyCollectionViewCell: UICollectionViewCell {
         nameLabel.backgroundColor = .black.withAlphaComponent(0.6)
     }
     
-    func configureUI() {
-        artworkImageView.image = UIImage(named: images.randomElement() ?? "panda1")
-        nameLabel.text = images.randomElement() ?? "Random"
+    func configureUI(photo: Photo?) {
+        guard let photo = photo else { return }
+        reset()
+        
+        let url = URL(string: photo.src?.original ?? "")
+        artworkImageView.kf.setImage(with: url)
+        nameLabel.text = photo.photographer
     }
 
 }

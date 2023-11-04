@@ -10,7 +10,6 @@ import UIKit
 class CustomHeaderTableViewCell: UITableViewHeaderFooterView {
 
     @IBOutlet private weak var sectionTitleLabel: UILabel!
-    @IBOutlet private weak var sectionButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,9 +19,4 @@ class CustomHeaderTableViewCell: UITableViewHeaderFooterView {
     func configureUI(title: String) {
         sectionTitleLabel.text = title
     }
-    
-    @IBAction func sectionButtonAction(_ sender: UIButton) {
-        print("Tap Section Button!!")
-    }
-    
 }

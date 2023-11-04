@@ -11,6 +11,12 @@ class WallyTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private var photos: [Photo]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -28,17 +34,21 @@ class WallyTableViewCell: UITableViewCell {
         collectionView.register(UINib(nibName: Constants.HomeLanding.WallyCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.HomeLanding.WallyCollectionViewCell)
     }
     
+    func configureUI(photos: [Photo]?) {
+        guard let photos = photos else { return }
+        self.photos = photos
+    }
 }
 
 
 extension WallyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return photos?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: WallyCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.HomeLanding.WallyCollectionViewCell, for: indexPath) as! WallyCollectionViewCell
-        cell.configureUI()
+        cell.configureUI(photo: photos?[indexPath.row])
         return cell
     }
 
@@ -49,6 +59,5 @@ extension WallyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
     }
-    
-    
 }
+

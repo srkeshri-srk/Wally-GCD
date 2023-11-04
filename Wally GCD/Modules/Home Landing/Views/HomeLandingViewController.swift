@@ -18,7 +18,6 @@ class HomeLandingViewController: UIViewController {
         
         setupUI()
         setupTableView()
-        fetchData()
     }
     
     private func setupUI() {
@@ -32,11 +31,7 @@ class HomeLandingViewController: UIViewController {
         tableView.register(UINib(nibName: Constants.HomeLanding.WallyTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.HomeLanding.WallyTableViewCell)
         tableView.register(UINib(nibName: Constants.HomeLanding.CustomHeaderTableViewCell, bundle: nil), forHeaderFooterViewReuseIdentifier: Constants.HomeLanding.CustomHeaderTableViewCell)
     }
-    
-    func fetchData() {
-        viewModel.hitAPIForSection(atPage: 2)
-    }
-    
+
 }
 
 
@@ -47,6 +42,7 @@ extension HomeLandingViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: WallyTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.HomeLanding.WallyTableViewCell, for: indexPath) as! WallyTableViewCell
+        cell.configureUI(photos: viewModel.getInfo(at: indexPath.section))
         return cell
     }
     
@@ -54,13 +50,19 @@ extension HomeLandingViewController: UITableViewDelegate, UITableViewDataSource 
         return 150
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        viewModel.hitAPIForSection(atPage: indexPath.section + 1)
+    }
+
+    
+    //MARK: - Section Task
     func numberOfSections(in tableView: UITableView) -> Int {
         return 10
     }
             
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell: CustomHeaderTableViewCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.HomeLanding.CustomHeaderTableViewCell) as! CustomHeaderTableViewCell
-        cell.configureUI(title: "Section : \(section)")
+        cell.configureUI(title: "Section : \(section + 1)")
         return cell
     }
     
