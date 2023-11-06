@@ -48,7 +48,7 @@ final class URLSessionNetworkLayer {
             }
             
             //Status Validation
-            guard (200...299).contains((response as? HTTPURLResponse)?.statusCode ?? 0) else {
+            guard let response = response as? HTTPURLResponse, (200..<300) ~= response.statusCode else {
                 completion(.failure(.httpFailure))
                 return
             }
