@@ -11,6 +11,7 @@ import Kingfisher
 
 class WallyCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var artworkImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
         
@@ -26,7 +27,8 @@ class WallyCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupUI() {
-        artworkImageView.layer.cornerRadius = 8.0
+        containerView.layer.cornerRadius = 8.0
+        containerView.layer.masksToBounds = true
         nameLabel.backgroundColor = .black.withAlphaComponent(0.6)
     }
     

@@ -56,6 +56,7 @@
             <size key="customSize" width="145" height="167"/>
             <connections>
                 <outlet property="artworkImageView" destination="N3k-Zy-OqO" id="amF-AP-KZp"/>
+                <outlet property="containerView" destination="lvz-gc-IaS" id="WaB-Va-0MJ"/>
                 <outlet property="nameLabel" destination="7UG-9x-AaV" id="MuT-EN-nwj"/>
             </connections>
             <point key="canvasLocation" x="211.4503816793893" y="60.563380281690144"/>
