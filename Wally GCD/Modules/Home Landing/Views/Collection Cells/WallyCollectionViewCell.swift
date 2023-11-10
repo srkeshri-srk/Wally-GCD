@@ -36,9 +36,13 @@ class WallyCollectionViewCell: UICollectionViewCell {
         guard let photo = photo else { return }
         reset()
         
-        let url = URL(string: photo.src?.original ?? "")
-        artworkImageView.kf.setImage(with: url)
         nameLabel.text = photo.photographer
+        if let artwork = photo.src?.small, let url = URL(string: artwork) {
+            let processor = DownsamplingImageProcessor(size: artworkImageView.bounds.size)
+
+            artworkImageView.kf.indicatorType = .activity
+            artworkImageView.kf.setImage(with: url, placeholder: UIImage(named: "launchScreen"), options: [.processor(processor), .scaleFactor(UIScreen.main.scale), .transition(.fade(1)), .cacheOriginalImage])
+        }
     }
 
 }

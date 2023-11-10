@@ -18,6 +18,7 @@ class HomeLandingViewController: UIViewController {
         
         setupUI()
         setupTableView()
+        fetchData()
     }
     
     private func setupUI() {
@@ -30,6 +31,20 @@ class HomeLandingViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: Constants.HomeLanding.WallyTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.HomeLanding.WallyTableViewCell)
         tableView.register(UINib(nibName: Constants.HomeLanding.CustomHeaderTableViewCell, bundle: nil), forHeaderFooterViewReuseIdentifier: Constants.HomeLanding.CustomHeaderTableViewCell)
+    }
+    
+    func fetchData() {
+        let queue = DispatchQueue(label: "HomeData", qos: .background, attributes: .concurrent)
+        
+        queue.async {
+            for number in 1...10 {
+                self.viewModel.hitAPIForSection(atPage: number) {
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
     }
 
 }
@@ -51,13 +66,12 @@ extension HomeLandingViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        viewModel.hitAPIForSection(atPage: indexPath.section + 1)
     }
 
     
     //MARK: - Section Task
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return viewModel.sectionCount
     }
             
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

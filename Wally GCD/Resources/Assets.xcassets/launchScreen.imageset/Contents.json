@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "panda2.jpg",
+      "filename" : "launchScreen.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "panda2 1.jpg",
+      "filename" : "launchScreen 1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "panda2 2.jpg",
+      "filename" : "launchScreen 2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

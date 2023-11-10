@@ -9,10 +9,14 @@ import Foundation
 
 
 class HomeLandingViewModel {
-    private let urlSession = URLSessionNetworkLayer()
+    private let urlSession = NetworkLayerServices()
     private var dataModel = [Int: HomeLandingModel?]()
     private var completeUrl: String {
         return Constants.NetworkLayer.apiURL + "curated"
+    }
+    
+    var sectionCount: Int {
+        return dataModel.count
     }
     
     
