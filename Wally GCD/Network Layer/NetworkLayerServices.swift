@@ -7,10 +7,9 @@
 
 import Foundation
 
-
 final class NetworkLayerServices {
-    var urlSession: URLSession
-    private var configuration: URLSessionConfiguration
+    let urlSession: URLSession
+    private let configuration: URLSessionConfiguration
     
     init() {
         configuration = URLSessionConfiguration.default

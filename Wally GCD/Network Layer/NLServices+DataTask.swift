@@ -7,10 +7,9 @@
 
 import Foundation
 
-
-extension NetworkLayerServices: URLPreparable {
+extension NetworkLayerServices {
     public func dataTask<T: Codable>(_ api: APIRequest, completion: @escaping (_ result: Result<T, NetworkError>) -> Void) {
-        guard let urlRequest = prepareURLRequest(with: api) else {
+        guard let urlRequest = URLGenerator.prepareURLRequest(with: api) else {
             return completion(.failure(.urlNotFound))
         }
                     

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 public class JSONParser {
     private let jsonDecoder = JSONDecoder()
     

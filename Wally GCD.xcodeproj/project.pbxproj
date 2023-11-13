@@ -13,7 +13,7 @@
 		E115F0542AF23C000077AF35 /* WallyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E115F0522AF23C000077AF35 /* WallyTableViewCell.xib */; };
 		E115F0582AF23D470077AF35 /* WallyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115F0562AF23D470077AF35 /* WallyCollectionViewCell.swift */; };
 		E115F0592AF23D470077AF35 /* WallyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E115F0572AF23D470077AF35 /* WallyCollectionViewCell.xib */; };
-		E1307A542AFEB7C5009EDF41 /* URLRequestGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1307A532AFEB7C5009EDF41 /* URLRequestGenerator.swift */; };
+		E1307A542AFEB7C5009EDF41 /* URLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1307A532AFEB7C5009EDF41 /* URLGenerator.swift */; };
 		E1307A562AFEBA3D009EDF41 /* NLServices+DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1307A552AFEBA3D009EDF41 /* NLServices+DataTask.swift */; };
 		E16B2A562AF234800013DC62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B2A552AF234800013DC62 /* AppDelegate.swift */; };
 		E16B2A582AF234800013DC62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B2A572AF234800013DC62 /* SceneDelegate.swift */; };
@@ -41,7 +41,7 @@
 		E115F0522AF23C000077AF35 /* WallyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallyTableViewCell.xib; sourceTree = "<group>"; };
 		E115F0562AF23D470077AF35 /* WallyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallyCollectionViewCell.swift; sourceTree = "<group>"; };
 		E115F0572AF23D470077AF35 /* WallyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallyCollectionViewCell.xib; sourceTree = "<group>"; };
-		E1307A532AFEB7C5009EDF41 /* URLRequestGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestGenerator.swift; sourceTree = "<group>"; };
+		E1307A532AFEB7C5009EDF41 /* URLGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLGenerator.swift; sourceTree = "<group>"; };
 		E1307A552AFEBA3D009EDF41 /* NLServices+DataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NLServices+DataTask.swift"; sourceTree = "<group>"; };
 		E16B2A522AF234800013DC62 /* Wally GCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wally GCD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16B2A552AF234800013DC62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 				E19BA7B02AF263FC0058A980 /* NetworkError.swift */,
 				E19BA7B22AF2640B0058A980 /* JSONParser.swift */,
 				E19BA7C12AF2D9980058A980 /* APIRequest.swift */,
-				E1307A532AFEB7C5009EDF41 /* URLRequestGenerator.swift */,
+				E1307A532AFEB7C5009EDF41 /* URLGenerator.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -314,7 +314,7 @@
 				E17C0C7E2AF9B232004880CC /* UIImageView+Extension.swift in Sources */,
 				E16B2A6D2AF236630013DC62 /* HomeLandingViewController.swift in Sources */,
 				E1307A562AFEBA3D009EDF41 /* NLServices+DataTask.swift in Sources */,
-				E1307A542AFEB7C5009EDF41 /* URLRequestGenerator.swift in Sources */,
+				E1307A542AFEB7C5009EDF41 /* URLGenerator.swift in Sources */,
 				E19BA7B62AF270B50058A980 /* CustomHeaderTableViewCell.swift in Sources */,
 				E19BA7AA2AF262010058A980 /* HomeLandingViewModel.swift in Sources */,
 				E19BA7C22AF2D9980058A980 /* APIRequest.swift in Sources */,

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum NetworkError: Error {
     case urlNotFound
     case dataCantParse
